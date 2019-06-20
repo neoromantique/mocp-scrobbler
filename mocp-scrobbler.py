@@ -4,7 +4,7 @@
 # Author: Tomasz 'Fluxid' Kowalczyk
 # e-mail and xmpp/jabber: myself@fluxid.pl
 
-from configparser import SafeConfigParser
+from configparser import ConfigParser
 import getopt
 from hashlib import md5
 from http.client import HTTPConnection
@@ -429,7 +429,7 @@ def main():
     
     if kill: return
 
-    config = SafeConfigParser()
+    config = ConfigParser()
 
     try:
         config.read(configpath)
